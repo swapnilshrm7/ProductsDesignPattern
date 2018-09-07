@@ -1,4 +1,4 @@
-create Database ProductsDatabase
+// file not saved after changes, some fields need to be added, insertion commands
 create Database SavedProductDatabase
 
 use SavedProductDatabase
@@ -12,11 +12,6 @@ insert into HotelProducts values('Novotel',8000.0,0)
 insert into HotelProducts values('IBIS',5000.0,0)
 insert into HotelProducts values('The Taj',12000.0,0)
 insert into HotelProducts values('Trident',11000.0,0)
-update HotelProducts SET Rating='4.3' where Id=5
-update HotelProducts SET Rating='4.6' where Id=4
-update HotelProducts SET Rating='4.1' where Id=3
-update HotelProducts SET Rating='4.0' where Id=2
-update HotelProducts SET Rating='4.9' where Id=1
 
 insert into AirProducts values('Air India',5000,0)
 insert into AirProducts values('Jet Airways',5500,0)
@@ -35,11 +30,6 @@ insert into ActivityProducts values('Theatre',500,0)
 insert into ActivityProducts values('StandUp',1000,0)
 insert into ActivityProducts values('ThemePark',700,0)
 insert into ActivityProducts values('Party',1500,0)
-update ActivityProducts SET TotalTime='2 H 45 Min' where Id=1
-update ActivityProducts SET TotalTime='2 H 00 Min' where Id=2
-update ActivityProducts SET TotalTime='1 H 30 Min' where Id=3
-update ActivityProducts SET TotalTime='All Day' where Id=4
-update ActivityProducts SET TotalTime='All Night' where Id=5
 
 ALTER TABLE ActivityProducts
 ADD TotalTime varchar(10);
