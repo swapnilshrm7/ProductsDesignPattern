@@ -1,0 +1,36 @@
+// file not saved after changes, some fields need to be added, insertion commands
+create Database SavedProductDatabase
+
+use SavedProductDatabase
+create Table AirProducts(Id int identity(1,1) NOT NULL,Name varchar(30),Price float,IsBooked bit NOT NULL,IsSaved bit NOT NULL,DepartureTime varchar(15),ArrivalTime varchar(15),PRIMARY KEY(Id))
+create Table ActivityProducts(Id int identity(1,1) NOT NULL,Name varchar(30),Price float,IsBooked bit NOT NULL,IsSaved bit NOT NULL,StartTime varchar(10),TotalTime varchar(10),PRIMARY KEY(Id))
+create Table HotelProducts(Id int identity(1,1) NOT NULL,Name varchar(30),Price float,IsBooked bit NOT NULL,IsSaved bit NOT NULL,RoomType varchar(10),CheckIn varchar(10),CheckOut varchar(10),Rating varchar(3),PRIMARY KEY(Id))
+create Table CarProducts(Id int identity(1,1) NOT NULL,Name varchar(30),Price float,IsBooked bit NOT NULL,IsSaved bit NOT NULL,StartTime varchar(10),EndTime varchar(10)PRIMARY KEY(Id))
+
+insert into HotelProducts values('Hyatt Regency',10000.0,0)
+insert into HotelProducts values('Novotel',8000.0,0)
+insert into HotelProducts values('IBIS',5000.0,0)
+insert into HotelProducts values('The Taj',12000.0,0)
+insert into HotelProducts values('Trident',11000.0,0)
+
+insert into AirProducts values('Air India',5000,0)
+insert into AirProducts values('Jet Airways',5500,0)
+insert into AirProducts values('Emirates',6000,0)
+insert into AirProducts values('Air Asia',6500,0)
+insert into AirProducts values('Vistara',8000,0)
+ 
+insert into CarProducts values('Phantom',450000,0)
+insert into CarProducts values('Aventador',393695,0)
+insert into CarProducts values('M5',104000,0)
+insert into CarProducts values('911',100000,0)
+insert into CarProducts values('AMG',300000,0)
+ 
+insert into ActivityProducts values('Movie',300,0)
+insert into ActivityProducts values('Theatre',500,0)
+insert into ActivityProducts values('StandUp',1000,0)
+insert into ActivityProducts values('ThemePark',700,0)
+insert into ActivityProducts values('Party',1500,0)
+
+ALTER TABLE ActivityProducts
+ADD TotalTime varchar(10);
+select * from HotelProducts
